@@ -11,7 +11,7 @@ class Halp < Sinatra::Base
 
 	get '/search' do
 		@query = params[:search]
-		wiki = Gollum::Wiki.new('~/Projects/gpdocs')
+		wiki = Gollum::Wiki.new(options.rep)
 		@results = wiki.search @query
 		@name = @query
 		
@@ -25,7 +25,7 @@ class Halp < Sinatra::Base
 
 	# returns a given page (or file) inside our repository
 	def show(name)
-		wiki = Gollum::Wiki.new('~/Projects/gpdocs')
+		wiki = Gollum::Wiki.new(options.rep)
 		if page = wiki.page(name)
 			@page = page
 			@name = page.title
@@ -37,6 +37,14 @@ class Halp < Sinatra::Base
 		else
 			halt 404
 		end
+	end
+
+	configure :development do
+	  set :rep, '~/Projects/gpdocs'
+	end
+
+	configure :production do
+	  set :rep, '~/gpdocs'
 	end
 
 end
