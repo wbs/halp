@@ -1,62 +1,7 @@
-<!doctype html>
-<head>
-	<title><%= @name %></title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/text.css">
-	<link rel="stylesheet" href="/css/960.css">
-	<link rel="stylesheet" href="/css/screen.css">
-</head>
-<body>
-	<div class="black clearfix">
-		<div class="container_12">
-			<div id="logo" class="grid_8 prefix_2">
-				<img src="/img/tick.png"> 
-				<strong>Goplan</strong> 
-				<em>- Documentation, Guides and Product Roadmap -</em>
-				<a href="http://goplanapp.com">Homepage</a> / 
-				<a href="http://blog.goplanapp.com">Blog</a> / 
-				<a href="http://status.goplanapp.com">Status</a>
-			</div>
-		</div>
-	</div>
+<h1><%= @name %></h1>
+<article><%= @content %></article>
 
-	<div class="container_12">
-		<div id="content" class="grid_8 prefix_2">
-			<div class="note">
-				<% if @page.title != "Home" %>
-				<div class="notenav clearfix">
-					<div class="grid_5 alpha bcrumbs">
-						<a href="/">Home</a> &gt; <%= @name %>
-					</div>
-					
-					<!-- search -->
-					<!-- 
-					<div class="grid_2 omega">
-						<div id="search">
-							<form action="/search" method="get" id="search-form">
-								<input type="search" name="search" id="search-query" value="" autocomplete="off">
-							</form>
-						</div>
-					</div>
-					-->
-				</div>
-				<% end %>
-				
-				<h1><%= @name %></h1>
-				<article><%= @content %></article>
-				<div class="meta">
-					This page was last updated on: 
-					<%= @page.version.authored_date.strftime("%Y-%m-%d") %>. Page incomplete? <a href="mailto:support@goplanapp.com">Please get in touch</a>. Thanks!
-				</div>
-			</div>
-		</div>
-		
-		<div id="footer" class="grid_8 prefix_2">
-			<div>
-				Goplan is a product of <a href="http://webreakstuff.com">Webreakstuff</a> / Contact our support team by emailing <a href="mailto:support@goplanapp.com">support@goplanapp.com</a>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+<div class="meta">
+	This page was last updated on: 
+	<%= @page.version.authored_date.strftime("%Y-%m-%d") %>. Page incomplete? <a href="mailto:support@goplanapp.com">Please get in touch</a>. Thanks!
+</div>
