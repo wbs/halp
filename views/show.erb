@@ -24,8 +24,18 @@
 	<div class="container_12">
 		<div id="content" class="grid_8 prefix_2">
 			<div class="note">
+				<% if @page.title != "Home" %>
+					<div class="bcrumbs">
+						<a href="/">Home</a> &gt; <%= @name %>
+					</div>
+				<% end %>
+				
 				<h1><%= @name %></h1>
-				<article><%= @content %></article>			
+				<article><%= @content %></article>
+				<div class="meta">
+					This page was last updated on: 
+					<%= @page.version.authored_date.strftime("%Y-%m-%d") %>. Page incomplete? <a href="mailto:support@goplanapp.com">Please get in touch</a>. Thanks!
+				</div>
 			</div>
 		</div>
 		

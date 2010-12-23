@@ -6,8 +6,10 @@ a{text-decoration:none;}
 #logo{font-size:11px;text-align:center;margin-bottom:15px;color:#fff;}#logo img{vertical-align:middle;margin-right:2px;}
 #logo em{color:#999;font-style:normal;}
 #logo a{color:#fffccc;font-weight:bold;}
-#content .note{background:#fff;border:1px solid #ececec;padding:25px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;}
+#content .bcrumbs{font-size:11px;color:#999;border-bottom:1px dotted #ccc;padding-bottom:8px;margin-bottom:20px;}#content .bcrumbs a{color:#666;text-decoration:underline;}
+#content .note{background:#fff;border:1px solid #ececec;padding:25px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;}#content .note .meta{margin-top:20px;border-top:1px dotted #ccc;padding-top:8px;color:#999;font-size:11px;}#content .note .meta a{color:#666;text-decoration:underline;}
 #content article h1{font-size:18px;font-weight:bold;border-bottom:1px solid #eee;}
+#content article h2{font-size:16px;font-weight:bold;border-bottom:1px solid #eee;}
 #content article p{font-size:14px;line-height:1.5em;}
 #content article li{font-size:14px;line-height:1.5em;}
 #content article a{background:#e3fff0;color:#444;}

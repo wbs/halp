@@ -19,7 +19,7 @@ class Halp < Sinatra::Base
 		wiki = Gollum::Wiki.new('~/Projects/gpdocs')
 		if page = wiki.page(name)
 			@page = page
-			@name = name
+			@name = page.title
 			@content = page.formatted_data
 			erb :show
 		elsif file = wiki.file(name)

@@ -63,16 +63,48 @@ a {
 }
 
 #content {
+	.bcrumbs {
+		font-size: 11px;
+		color: #999;
+		border-bottom: 1px dotted #ccc;
+		padding-bottom: 8px;
+		margin-bottom: 20px;
+
+		a {
+			color: #666;
+			text-decoration: underline;
+		}
+	}
+	
 	.note {
 		background: #fff;
 		border: 1px solid #ececec;
 		padding: 25px;
 		.rc(8px);
+		
+		.meta {
+			margin-top: 20px;
+			border-top: 1px dotted #ccc;
+			padding-top: 8px;
+			color: #999;
+			font-size: 11px;
+			
+			a {
+				color: #666;
+				text-decoration: underline;
+			}
+		}
 	}
 	
 	article {		
 		h1 {
 			font-size: 18px;
+			font-weight: bold;
+			border-bottom: 1px solid #eee;
+		}
+
+		h2 {
+			font-size: 16px;
 			font-weight: bold;
 			border-bottom: 1px solid #eee;
 		}
