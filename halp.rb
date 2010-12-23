@@ -39,10 +39,12 @@ class Halp < Sinatra::Base
 		end
 	end
 
+	# configure our dev environment
 	configure :development do
 	  set :rep, '~/Projects/gpdocs'
 	end
 
+	# configure our production environment
 	configure :production do
 	  set :rep, '~/gpdocs'
 	end
