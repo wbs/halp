@@ -8,26 +8,39 @@
 	<link rel="stylesheet" href="/css/screen.css">
 </head>
 <body>
-<div class="black clearfix">
-	<div class="container_12">
-		<div id="logo" class="grid_8 prefix_2">
-			<img src="/img/tick.png"> 
-			<strong>Goplan</strong> 
-			<em>- Documentation, Guides and Product Roadmap -</em>
-			<a href="http://goplanapp.com">Homepage</a> / 
-			<a href="http://blog.goplanapp.com">Blog</a> / 
-			<a href="http://status.goplanapp.com">Status</a>
+	<div class="black clearfix">
+		<div class="container_12">
+			<div id="logo" class="grid_8 prefix_2">
+				<img src="/img/tick.png"> 
+				<strong>Goplan</strong> 
+				<em>- Documentation, Guides and Product Roadmap -</em>
+				<a href="http://goplanapp.com">Homepage</a> / 
+				<a href="http://blog.goplanapp.com">Blog</a> / 
+				<a href="http://status.goplanapp.com">Status</a>
+			</div>
 		</div>
 	</div>
-</div>
 
 	<div class="container_12">
 		<div id="content" class="grid_8 prefix_2">
 			<div class="note">
 				<% if @page.title != "Home" %>
-					<div class="bcrumbs">
+				<div class="notenav clearfix">
+					<div class="grid_5 alpha bcrumbs">
 						<a href="/">Home</a> &gt; <%= @name %>
 					</div>
+					
+					<!-- search -->
+					<!-- 
+					<div class="grid_2 omega">
+						<div id="search">
+							<form action="/search" method="get" id="search-form">
+								<input type="search" name="search" id="search-query" value="" autocomplete="off">
+							</form>
+						</div>
+					</div>
+					-->
+				</div>
 				<% end %>
 				
 				<h1><%= @name %></h1>

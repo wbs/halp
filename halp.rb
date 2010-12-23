@@ -9,6 +9,15 @@ class Halp < Sinatra::Base
 		show('Home')
 	end
 
+	get '/search' do
+		@query = params[:search]
+		wiki = Gollum::Wiki.new('~/Projects/gpdocs')
+		@results = wiki.search @query
+		@name = @query
+		
+		erb :results
+	end
+
 	# show everything else
 	get '/*' do
 		show(params[:splat].first)

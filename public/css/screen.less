@@ -63,7 +63,7 @@ a {
 }
 
 #content {
-	.bcrumbs {
+	.notenav {
 		font-size: 11px;
 		color: #999;
 		border-bottom: 1px dotted #ccc;
@@ -139,4 +139,33 @@ a {
 		color: #666;
 		text-decoration: underline;
 	}
+}
+
+/* syntax highlight */
+
+article pre {
+	margin: 1em 0 !important;
+	font-size: 90% !important;
+	background-color: #fffccc !important;
+	border: 1px solid #dedede !important;
+	padding: .5em !important;
+	line-height: 1.5em !important;
+	color: #444 !important;
+	overflow: auto !important;
+}
+
+article pre code {
+	padding: 0 !important;
+	font-size: 100% !important;
+	background-color: #f8f8ff !important;
+	border: none !important;
+}
+
+article code {
+	font-size: 90% !important;
+	background-color: #fffddd !important;
+	color: #444 !important;
+	padding: 0 .2em !important;
+	border: 1px solid #ddd !important;
+	.rc(4px);
 }
